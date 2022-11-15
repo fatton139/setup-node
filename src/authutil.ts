@@ -5,10 +5,7 @@ import * as core from '@actions/core';
 import * as github from '@actions/github';
 
 export function configAuthentication(registryUrl: string, alwaysAuth: string) {
-  const npmrc: string = path.resolve(
-    os.homedir(),
-    '.npmrc'
-  );
+  const npmrc: string = path.resolve(os.homedir(), '.npmrc');
   if (!registryUrl.endsWith('/')) {
     registryUrl += '/';
   }
