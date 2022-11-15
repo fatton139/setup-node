@@ -6,7 +6,7 @@ import * as github from '@actions/github';
 
 export function configAuthentication(registryUrl: string, alwaysAuth: string) {
   const npmrc: string = path.resolve(
-    process.env['RUNNER_TEMP'] || process.cwd(),
+    os.homedir(),
     '.npmrc'
   );
   if (!registryUrl.endsWith('/')) {
